@@ -10,6 +10,7 @@ github 페이지를 만들어 보았다.
 ### test
 
 ## 1 ##
+```
 void Start()
 {
     offset = tr.position - player.position;
@@ -20,6 +21,7 @@ void LateUpdate()
     Vector3 newPos = player.position + offset;
     tr.position = Vector3.Slerp(tr.position, newPos, smoothness(float));
 }
+```
 
 Camera follows player depends on ths smoothness. (camera only views one way.)
 
