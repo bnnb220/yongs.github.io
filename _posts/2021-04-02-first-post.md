@@ -1,13 +1,7 @@
 ---
-title: "깃허브 페이지 사용"
+title: "Unity Basics_1"
 ---
-github 페이지를 만들어 보았다.
-
-# test
-
-## test
-
-### test
+I've tried to implement the movement of Player and Camera.
 
 ## 1 ##
 ```
@@ -23,11 +17,12 @@ void LateUpdate()
 }
 ```
 
-Camera follows player depends on ths smoothness. (camera only views one way.)
+Camera follows player depends on the smoothness. (camera only views one way.)
 
 
 ## 2 ##
-
+```
+void Start()
 {
     offset = new Vector3(player.position.x, player.position.y + 8.0f, player.position.z + 7.0f);
 }
@@ -39,7 +34,20 @@ void LateUpdate()
     transform.position = player.position + offset; 
     transform.LookAt(player.position);
 }
-
+```
 Quaternion.AngleAxis -> rotate this based on Vector3.up axis.
 LookAt -> camera always look player.
 
+
+## 3 ##
+```
+void Start()
+{
+    
+}
+
+void LateUpdate()
+{
+    
+}
+```
