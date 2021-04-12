@@ -1,5 +1,5 @@
 ---
-title: "Unity Basics_1"
+title: "Unity Basics 04.06.21"
 ---
 I've tried to implement the movement of Player and Camera.
 
