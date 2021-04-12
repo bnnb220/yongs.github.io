@@ -35,7 +35,7 @@ void LateUpdate()
     transform.LookAt(player.position);
 }
 ```
-Quaternion.AngleAxis -> rotate this based on Vector3.up axis.
+Quaternion.AngleAxis -> rotate selected amount based on the Vector3.up axis.
 LookAt -> camera always look player.
 
 
@@ -43,11 +43,17 @@ LookAt -> camera always look player.
 ```
 void Start()
 {
-    
+    offset = new Vector3(player.position.x, player.position.y + 8.0f, player.position.z + 7.0f);
 }
 
 void LateUpdate()
 {
-    
+    var rotationOffset = player.eulerAngles.y - transform.eulerAngles.y;
+    var t = Quaternion.AngleAxis (rotationOffset, Vector3.up);
+    offset =  t * offset;
+    transform.position = player.position + offset; 
+    transform.LookAt(player.position);
 }
 ```
+Camera rotates based on the player's direction.
+eulerAngles : -180 ~ 180 
