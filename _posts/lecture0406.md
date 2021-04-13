@@ -94,21 +94,21 @@ ex) Bullet Object
 **Audio source in player**
 
 1.  
-```
+```cs
     void Fire()
     {
         audio.clip = fireSfx;
         audio.Play();
     }
-    set sound source into the audio component, and play.
-        - if sound plays again during the previous sound not end  -> previous sound stops.
+    //set sound source into the audio component, and play.
+    //   - if sound plays again during the previous sound not end  -> previous sound stops.
 ```
 
 2. 
-```
+```cs
     void Fire()
     {
         audio.PlayOneShot(fireSfx, 0.8f);
     }
-    Even if new sound plays, previous sound keeps playing.
+    //Even if new sound plays, previous sound keeps playing.
 ```

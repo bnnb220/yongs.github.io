@@ -1,0 +1,44 @@
+---
+title : Unity Basics 04.13.21
+---
+
+
+
+
+
+**Quaternion**
+    - 4 values: x, y, z ,w
+    - If use Euler rotation Instead, it may cause gimbal lock.
+
+Usage
+    - Quaternion.Euler(x,y,z) 
+        - it changes euler angle values into quaternion value.
+    - Quaternion.LookRotation
+        - it changes vector3 value into quaternion value.
+
+Quaternion : 사원수
+it has x, y, z, w
+
+
+
+# tips
+
+**Move toward the following object"**
+```cs
+transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
+```
+
+
+**Find following game object in scene.**
+```cs
+player = GameObject.Find("Player");
+```
+
+**Avoid making garbage memory**
+```cs
+ContactPoint[] points = coll.contacts; // memory saved in garbage.
+ContactPoint cont = coll.GetContact(0); // memory not saved in garbage.
+```
+
+
+
